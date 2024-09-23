@@ -1,0 +1,311 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+*{
+    font-family: "Open Sans", sans-serif;
+}
+
+body{
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    background-color: #0f0f0f;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    color: white;
+}
+
+header{
+    display: flex;
+    flex-direction: row;    
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    color: white;
+    width: 100%;
+    height: 70px;
+}
+
+header h1{
+    margin-left: 30px;
+}
+
+header img{
+    width: 18px;
+    height: 18px;
+    margin-right: 30px;
+}
+
+#pesquisa{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px
+}
+
+#listaFilmPesq{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    overflow-x: scroll;
+    height: 234px;
+    align-items: center;
+}
+
+#listaFilmPesq::-webkit-scrollbar {
+    height: 2px;
+  }
+
+#listaFilmPesq::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+#listaFilmPesq::-webkit-scrollbar-thumb {
+    background: white; 
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#imgs{
+    width: 120px;
+    height: 180px;
+}
+
+.mostPop{
+    margin: 0;
+    width: 100%;
+    height: 400px;
+    margin-bottom: 150px;
+}
+
+.mostPop img{
+    width: 100%;
+    height: 47rem;
+    object-fit: cover;
+}
+
+.mostPopInfo{
+    display: flex;
+    flex-direction: column;
+}
+
+#informacoes{
+    margin-left: 30px;
+    background: rgb(15, 15, 15);
+background: linear-gradient(0deg, rgba(15, 15, 15, 1) 20%, rgba(15, 15, 15, 0.8) 50%, rgba(0, 0, 0, 0) 100%);
+}
+
+#informSpan{
+    font-size: 50px;
+}
+
+#sinopInform{
+    width: 40%;
+    align-items: start;
+}
+
+.buttonMostPop{
+    display: flex;
+    flex-direction: row;
+    margin-left: 30px;
+    gap: 10px;
+}
+
+#btnMP1{
+    font-size: 20px;
+      background-color: white;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      border: none;
+      border-radius: 2px;
+      padding: 10px;
+      color: black; 
+      gap: 3px;
+}
+
+#btnMP1 img{
+    width: 20px;
+    height: 20px;
+}
+
+#btnMP2{
+    font-size: 20px;
+      background-color: white;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      border: none;
+      border-radius: 2px;
+      padding: 10px;
+      color: black; 
+      gap: 3px;
+}
+
+.filmesCard{
+    margin-left: 30px;
+}
+
+#filmesAcao{
+    z-index: 1;
+}
+
+.imgFilme{
+    width: 120px;
+    height: 180px;
+}
+
+.scrolls{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    overflow-x: scroll;
+    height: 234px;
+    align-items: center;
+}
+
+.scrolls::-webkit-scrollbar {
+    height: 2px;
+  }
+
+.scrolls::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.scrolls::-webkit-scrollbar-thumb {
+    background: white; 
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#filme {
+    position: relative;
+    transition: transform 0.3s ease, z-index 0s;
+    z-index: 1;
+    height: 180px;
+}
+
+#filme:hover::before {
+    opacity: 1;
+    width: 400%;
+    height: 400%;
+}
+
+#filme:hover {
+    transform: scale(1.30);
+    z-index: 10;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
+}
+
+#filme > * {
+    position: relative;
+    z-index: 1;
+}
+
+#janelaSinp{
+    display: none;
+    flex-direction: column;
+    align-items:start;
+    background-color: rgb(15, 15, 15);
+    color: white;
+    width: 900px;
+    height: 700px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    animation: animate;
+    animation-duration: 500ms;
+    gap: 0px;
+    z-index: 10;
+  }
+  
+  #janelaSinp span{
+      font-size: 40px;
+      margin-top: 15px;
+      margin-left: 30px;
+      font-weight: bold;
+  }
+  
+  #janelaSinp p{
+      margin-left: 30px;
+      margin-top: 50px;
+      width: 35rem;
+      color: white;
+  }
+  
+  #assistirBtn{
+      font-size: 30px;
+      background-color: white;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      border: none;
+      border-radius: 5px;
+      padding: 10px;
+      color: black;
+      position: absolute;
+      bottom: 30px; 
+      margin-left: 30px;
+      margin-top: 140px;
+      gap: 3px;
+  }
+  
+  #assistirBtn img{
+      width: 30px;
+      height: 30px;
+  }
+  
+  @keyframes animate{
+    from{opacity: 1;}
+    from{opacity: 0;}
+  }
+  
+  #imgDiv{
+      width: 100%;
+      height: 400px;
+      border-bottom: 10px solid red;
+  }
+  
+  #imgDiv img{
+      width: 100%;
+      height: 100%;
+      margin: 0px;
+      object-fit: cover;
+      border-radius: 8px 8px 0px 0px;
+  }
+  
+  #closeBtn{
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      font-size: 20px;
+      border: none;
+      padding: 10px;
+      border-radius: 50px;
+      position: absolute;
+      width: 30px; 
+      height: 30px;
+      top: 10px; 
+      right: 10px; 
+      background-color: rgba(146, 145, 145, 0.5);
+      cursor: pointer;
+  }
+  
+  #filmesInfant{
+    margin-bottom: 30px;
+  }

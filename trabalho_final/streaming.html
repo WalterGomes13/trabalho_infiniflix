@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/streaming.css">
+</head>
+<body>
+    <header>
+        <h1 id="title" onclick="voltar()" style="cursor: pointer;">INFINIFLIX</h1>
+        
+        <div id="pesquisa">
+            <input type="search" name="" id="input">
+            <img src="lupa-branca-png-3-Transparent-Images.webp" alt="" onclick="pesquisar()">
+        </div>
+        
+    </header>
+    <main id="main">
+        <div class="mostPop">
+
+        
+        </div>
+        <div class="mostPopInfo">
+            <div id="informacoes">
+                <span id="informSpan"></span>
+                <p id="sinopInform"></p>
+            </div>
+            <div class="buttonMostPop">
+                <button id="btnMP1">Assistir<img src="27223.png" alt=""></button>
+                <button id="btnMP2">Mais Informações</button>
+            </div>
+        </div>
+        <div id="filmesAcao" class="filmesCard">
+            <span>Filmes de ação</span>
+            <div id="scrollAcao" class="scrolls">
+        
+            </div>
+        </div>
+        <div id="filmesComedia" class="filmesCard">
+            <span>Filmes de comédia</span>
+            <div id="scrollComedia" class="scrolls">
+                
+            </div>
+        </div>
+        <div id="filmesDrama" class="filmesCard">
+            <span>Filmes de drama</span>
+            <div id="scrollDrama" class="scrolls">
+                
+            </div>
+        </div>
+        <div id="filmesInfant" class="filmesCard">
+            <span>Filmes de animação</span>
+            <div id="scrollInfantil" class="scrolls">
+                
+            </div>
+        </div>
+        <div id="janelaSinp">
+            
+        </div>
+    </main>
+    <script src="scripts/streaming.js"></script>
+</body>
+</html>
